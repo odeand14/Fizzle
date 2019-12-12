@@ -6,7 +6,7 @@ namespace Task2.Tests
 {
     public class ModuloRuleTest
     {
-        private IModuloRule _moduloRule;
+        private ModuloRule _moduloRule;
         
         [SetUp]
         public void Setup()

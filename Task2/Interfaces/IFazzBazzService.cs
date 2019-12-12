@@ -8,7 +8,8 @@ namespace Task2.Interfaces
         void WriteToFile(string fileName);
         void AddRule(IRules rule);
         void ClearRules();
+        void ClearOneRule(string word);
         void ReverseDirection();
-        void Run(int times);
+        void Print(int times);
     }
 }

@@ -3,7 +3,7 @@ using Task2.Interfaces;
 
 namespace Task2.Rules
 {
-    public class ModuloRule : IModuloRule
+    public class ModuloRule : IRules
     {
         private readonly string _word;
         private readonly int _modulo;
@@ -16,6 +16,11 @@ namespace Task2.Rules
         public string Run(int i)
         {
             return CheckModulo(i, _modulo) ? _word : "";
+        }
+
+        public string GetWord()
+        {
+            return _word;
         }
 
         public bool CheckModulo(int number, int modulo)

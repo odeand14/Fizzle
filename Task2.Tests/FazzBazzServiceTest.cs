@@ -30,7 +30,7 @@ namespace Task2.Tests
         [Test]
         public void TestFileWrite()
         {
-            _fazzBazz.Run(ListLength);
+            _fazzBazz.Print(ListLength);
             _fazzBazz.WriteToFile("Test");
             FileAssert.Exists("Test.txt");
         }

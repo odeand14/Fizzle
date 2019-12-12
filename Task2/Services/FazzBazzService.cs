@@ -9,7 +9,7 @@ namespace Task2.Services
     public class FazzBazzService : IFazzBazzService
     {
         private readonly List<IRules> _rules;
-        private List<string> _currentList;
+        private readonly List<string> _currentList;
         private bool _clockWise;
         public FazzBazzService()
         {
@@ -50,6 +50,12 @@ namespace Task2.Services
             _rules.Clear();
         }
 
+        public void ClearOneRule(string word)
+        {
+            var rule = _rules.FirstOrDefault(s => s.GetWord() == word);
+            _rules.Remove(rule);
+        }
+
         public void ReverseDirection()
         {
             _clockWise = !_clockWise;
@@ -69,7 +75,7 @@ namespace Task2.Services
             }
         }
 
-        public void Run(int times)
+        public void Print(int times)
         {
             Console.WriteLine("---START---");
             foreach (var result in GetFazzBazz(times))

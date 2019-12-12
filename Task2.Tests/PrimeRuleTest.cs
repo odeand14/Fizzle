@@ -6,7 +6,7 @@ namespace Task2.Tests
 {
     public class PrimeRuleTest
     {
-        private IPrimeRule _primeRule;
+        private PrimeRule _primeRule;
         [SetUp]
         public void Setup()
         {

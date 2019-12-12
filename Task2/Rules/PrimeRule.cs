@@ -3,7 +3,7 @@ using Task2.Interfaces;
 
 namespace Task2.Rules
 {
-    public class PrimeRule : IPrimeRule
+    public class PrimeRule : IRules
     {
         private readonly string _word;
         public PrimeRule(string word)
@@ -14,6 +14,11 @@ namespace Task2.Rules
         public string Run(int i)
         {
             return CheckPrimeNumber(i) ? _word : "";
+        }
+
+        public string GetWord()
+        {
+            return _word;
         }
 
         public bool CheckPrimeNumber(int number)
